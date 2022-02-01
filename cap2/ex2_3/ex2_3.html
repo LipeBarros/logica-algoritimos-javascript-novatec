@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veiculos JS</title>
+</head>
+<body>
+        <h1>Revenda de Veículos JS</h1>
+        <p>
+            Veículo: <input type="text" id="nome">
+        </p>
+        <p>
+            Preço: <input type="text" id="preco">
+        </p>
+        <button onclick="calcular()">Ver promoção</button>
+
+        <div id="resultado"></div>
+
+        <script>
+
+            function calcular(){
+                var resultado = document.getElementById("resultado");
+                var nome = document.getElementById("nome").value;
+                var preco = Number(document.getElementById("preco").value);
+
+                var entrada = preco / 2;
+                var parcelas = entrada / 12;
+
+                resultado.innerHTML = `<p>Promoção: ${nome}</p>`
+                resultado.innerHTML += `<p>Entrada de R$: ${entrada}</p>`
+                resultado.innerHTML += `12x de R$: ${parcelas.toFixed(2)}.`
+            }
+
+
+            
+
+            
+
+
+        </script>
+</body>
+</html>
