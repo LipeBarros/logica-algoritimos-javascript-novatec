@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante</title>
+</head>
+<body>
+    <h1>Restaurante JS</h1>
+
+    <p>Buffet por Quilo R$: <input type="text" id="preco"></p>
+    <p>Consumo do Cliente (gr): <input type="text" id="prato"></p>
+
+    <button onclick="calcular()">Calcular Preço</button>
+
+    <div id="resultado"></div>
+
+    <script>
+        function calcular(){
+            var preco = Number(document.getElementById("preco").value);
+            var prato = Number(document.getElementById("prato").value);
+            var resultado = document.getElementById("resultado");
+
+            var valor = preco * (prato / 1000);
+
+            resultado.innerHTML = `Valor a pagar: R$ ${valor.toFixed(2)}`
+
+
+        }
+    </script>
+</body>
+</html>

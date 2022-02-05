@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmacia JS</title>
+</head>
+<body>
+
+    <h1>Farmácia JS</h1>
+
+    <p>Medicamento: <input type="text" id="produto"></p>
+    <p>Preço R$: <input type="text" id="preco"></p>
+
+    <button onclick="calcular()">Mostrar Promoção</button>
+
+    <div id="textoPromocional"></div>
+    
+    <script>
+            function calcular(){
+                var produto = document.getElementById("produto").value;
+                var preco = Number(document.getElementById("preco").value);
+                var textoPromocional = document.getElementById("textoPromocional");
+
+                var total = preco * 2
+
+                textoPromocional.innerHTML = `<p>Promoção de: ${produto}</p>`
+                textoPromocional.innerHTML += `<p>Leve dois por R$: ${total.toFixed(0)}</p>`
+            }
+
+    </script>
+
+</body>
+</html>

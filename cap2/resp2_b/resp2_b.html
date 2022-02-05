@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lan House JS</title>
+</head>
+<body>
+    <h1>Lan House JS</h1>
+
+    <p>Valor por 15min de Uso R$: <input type="text" id="valor"></p>
+    <p>Tempo de Uso do Cliente: <input type="text" id="tempoUso"></p>
+
+    <button onclick="tempo()">Calcular valor a Pagar</button>
+
+    <div id="resultado"></div>
+
+    <script>
+        function tempo(){
+            var precoPor15min = Number(document.getElementById("valor").value);
+            var tempoUso = Number(document.getElementById("tempoUso").value);
+            var resultado = document.getElementById("resultado")
+            
+            var total = precoPor15min * (tempoUso / 15);
+            
+            resultado.innerHTML = `Valor a Pagar R$: ${total.toFixed(2)}`
+
+        }
+    </script>
+
+</body>
+</html>
