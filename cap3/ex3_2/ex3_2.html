@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #balanca{
+            width: 200px;
+            float: left;
+            margin-right: 30px;
+        }
+    </style>
+    <title>Seu peso ideal</title>
+</head>
+<body>
+    
+    <img src="images.jpeg" alt="balanca" id="balanca">
+
+    <h1>Programa Cálculo do Peso Ideal</h1>
+    
+    <p>Nome: <input type="text" id="nome"></p>
+    <p>Sexo: 
+        <input type="radio" name="sexo" id="sexoM"> Masculino
+        <input type="radio" name="sexo" id="sexoF"> Feminino  
+    </p>
+    <p>Altura: <input type="text" id="altura"></p>   
+    
+    <button onclick="calcular()">Calcular Peso Ideal</button>
+    <button onclick="limpar()">Limpar Campos</button>
+
+    <h3 id="resultado"></h3>
+
+    <script>
+        
+        function calcular(){
+
+            const resultado = document.getElementById("resultado");
+            const nome = document.getElementById("nome").value;
+            const sexoM = document.getElementById("sexoM").checked;
+            const sexoF = document.getElementById("sexoF").checked;
+            const altura = Number(document.getElementById("altura").value);
+            let pesoIdeal 
+
+
+            // valida campos
+            if(nome === ""){
+                alert("Preencha um nome.")
+                return false
+            }
+            if(sexoM === false && sexoF === false){
+                alert("Selecione um sexo.")
+                return false
+            }
+            if(altura === 0){
+                alert("Preencha uma altura.")
+                return false
+            }
+
+
+            // calcula peso para homem ou para mulher
+            if(sexoM === true){
+                pesoIdeal = 22 * (altura**2)
+            }
+            else if(sexoF === true){
+                pesoIdeal = 21 * (altura**2)
+            }
+
+            resultado.innerHTML = `${nome} seu peso ideal é ${pesoIdeal}.`
+
+
+        }
+
+
+        function limpar(){
+            const nome = document.getElementById("nome");
+            const sexoM = document.getElementById("sexoM");
+            const sexoF = document.getElementById("sexoF");
+            const altura = document.getElementById("altura");
+            const resultado = document.getElementById("resultado");
+
+            nome.value = ""
+            sexoM.checked = false
+            sexoF.checked = false
+            altura.value = ""
+            resultado.innerHTML = ""
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media</title>
+</head>
+<body>
+    
+    <h1>Programa Situação do Aluno</h1>
+
+    <p>Nome do Aluno: <input type="text" id="nomeAluno"></p>
+    <p>1ª Nota: <input type="text" id="primeiraNota"></p>
+    <p>2ª Nota: <input type="text" id="segundaNota"></p>
+
+    <button onclick="mediaSituacao()">Exibir Média e Situação</button>
+
+    <h3 id="campoMedia"></h3>
+    <h3 id="situacao"></h3>
+
+    <script>
+        function mediaSituacao(){
+            var nomeAluno = document.getElementById("nomeAluno").value;
+            var primeiraNota = Number(document.getElementById("primeiraNota").value);
+            var segundaNota = Number(document.getElementById("segundaNota").value);
+            var campoMedia = document.getElementById("campoMedia");
+            var situacao = document.getElementById("situacao");
+
+            var media = (primeiraNota + segundaNota) / 2
+
+            campoMedia.innerHTML = `Media das Notas: ${media}`;
+            
+            if(media >= 7){
+                situacao.innerHTML = `Parabéns ${nomeAluno}! Você foi APROVADO. `
+                situacao.style.color = "blue"
+
+            } else if(media > 4){
+                situacao.innerHTML = `Você está de RECUPERAÇÂO!`
+                situacao.style.color = "orange"
+            } else{
+                situacao.innerHTML = `Ops... ${nomeAluno}, você foi REPROVADO!`
+                situacao.style.color = "red"
+            }
+        }
+    </script>
+
+</body>
+</html>
