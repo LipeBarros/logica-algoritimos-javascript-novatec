@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        const bairro = prompt("Informe o bairro para a entrega:");
+        let taxa = ""
+
+        // if(bairro === "centro"){
+        //     taxa = 0
+        // }else if(bairro ==="coqueiro"){
+        //     taxa = 2
+        // }else if( bairro === "baixada"){
+        //     taxa = 3
+        // }else{
+        //     taxa = 5
+        // }
+
+        switch(bairro){
+            case "centro":
+                taxa = 0;
+                break
+            case "coqueiro":
+                taxa = 2;
+                break
+            case "baixada":
+                taxa = 3;
+                break
+            default:
+                taxa = 5;  
+        }
+
+        alert(`Seu frete é: ${taxa.toFixed(2)}`)
+    </script>
+</body>
+</html>

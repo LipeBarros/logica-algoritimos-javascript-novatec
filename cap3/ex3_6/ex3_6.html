@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caixa Eletrônico</title>
+</head>
+<body>
+
+    <img src="caixaeletronico.jpg" alt="caixaeletronico" style="
+        width: 300px;
+        float: left;
+        margin-right: 20px; 
+    " >
+
+    <h1>Programa Caixa Eletrônico</h1>
+
+    <p>Valor do saque R$: <input type="text" id="valor"></p>
+
+    <button onclick="calcularNotas()">Exibir notas para saque</button>
+
+
+    <h3 id="nota100"></h3>
+    <h3 id="nota50"></h3>
+    <h3 id="nota10"></h3>
+
+    <script>
+        function calcularNotas(){
+            const nota100 = document.getElementById("nota100");
+            const nota50 = document.getElementById("nota50");
+            const nota10 = document.getElementById("nota10");
+            const valor = Number(document.getElementById("valor").value);
+            let resto
+
+
+            if(valor === 0 || isNaN(valor)){
+                alert(`Informe o valor do saque corretamente.`)
+                return false
+            }
+            
+            if(valor % 10 != 0){
+                alert(`Valor invalido para as notas dísponiveis.`)
+                return false
+            }
+
+            const quant100  = Math.floor(valor / 100);
+            resto = valor % 100
+
+            const quant50 = Math.floor(resto / 50);
+            resto = resto % 50
+
+            const quant10 = Math.floor(resto / 10);
+            
+            nota100.innerHTML = `Notas de R$ 100: ${quant100}`
+            nota50.innerHTML = `Notas de R$ 50: ${quant50}`
+            nota10.innerHTML = `Notas de R$ 10: ${quant10}`
+        }
+
+    </script>
+</body>
+</html>
