@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa verifica velocidade</title>
+</head>
+<body>
+
+    <img 
+        src="istockphoto-1095646814-1024x1024.jpg" 
+        alt="radar"
+        style="width: 200px; float:left; margin-right: 20px;"
+    >
+
+    <h1>Programa Verifica Velocidade</h1>
+
+    <p>
+        Velocidade Permitida: 
+        <input id="velPermitida" type="text">
+    </p>
+    <p>
+        Velocidade do Condutor:
+        <input id="velCondutor" type="text">
+    </p>
+
+    <button onclick="verificarVel()">Verificar Velocidade</button>
+
+    <h3 id="mensagem"></h3>
+
+    <script>
+        
+        function verificarVel(){
+            const velPermitida = Number(document.getElementById("velPermitida").value);
+            const velCondutor = Number(document.getElementById("velCondutor").value);
+            const mensagem = document.getElementById("mensagem");
+
+
+            
+            const porcentagem = velCondutor / velPermitida;
+
+
+
+            if(porcentagem <= 1){
+                mensagem.innerHTML = `Velocidade permitida,siga viagem.`
+                return false
+            }
+            else if(porcentagem <= 1.2){
+                mensagem.innerHTML = `Multa leve.`
+                return false
+            }
+            else if(porcentagem <= 1.4){
+                mensagem.innerHTML = `Multa média`
+                return false
+            }
+            else{
+                mensagem.innerHTML = `Multa grave`
+                return false
+            }
+        }
+
+    </script>
+
+</body>
+</html>
