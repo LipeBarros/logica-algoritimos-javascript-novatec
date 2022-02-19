@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Par ou Ímpar</title>
+</head>
+<body>
+
+    <img 
+        src="par_ou_impar.jpg" 
+        alt="foto"
+        style="width: 300px; float: left;"
+
+        >    
+    
+    <h1>Par ou Ímpar ?</h1>
+
+    <p>
+        Dígite um número:
+        <input id="campoNum" type="text" >
+    </p>
+
+    <button onclick="adivinhar()">Par ou Ímpar</button>
+
+    <h3 id="mensagem"></h3>
+
+    <script>
+        
+        function adivinhar(){
+           const numero = Number(document.getElementById("campoNum").value); 
+           const mensagem = document.getElementById("mensagem");
+
+           const calculo = numero % 2 ;
+
+           if(calculo === 0){
+               mensagem.innerHTML = `Seu número é par.`
+               return false
+           }
+           else{
+               mensagem.innerHTML = `Seu número é ímpar`
+               return false
+           }
+        }
+
+
+    </script>
+
+
+</body>
+</html>
