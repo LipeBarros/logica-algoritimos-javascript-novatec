@@ -1,0 +1,28 @@
+body{
+    font-family:Arial, Helvetica, sans-serif 
+}
+
+.aprovado{
+    margin-top: 2px;
+    border: 2px solid rgb(79, 129, 3);
+    background-color: rgb(153, 202, 153);
+    width: 400px;
+    text-align: center;
+    border-radius: 5px;
+    color: rgb(79, 129, 3);
+    font-size: 16px;
+    padding: 5px;
+
+}
+
+.reprovado{
+    margin-top: 2px;
+    border: 2px solid rgb(168, 20, 20);
+    background-color: rgb(185, 143, 136);
+    width: 400px;
+    text-align: center;
+    border-radius: 5px;
+    color:  rgb(168, 20, 20);
+    font-size: 16px;
+    padding: 5px;
+}
