@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculando a aprovação</title>
+</head>
+<body>
+    
+    <h1>Calculando sua aprovação</h1>
+
+  <div id="formulario">
+    <div>Nome do Aluno:</div>
+    <input type="text" id="nomeAluno">     
+
+    <div>Primeira Nota:</div>
+    <input type="text" id="primeiraNota" >
+
+    <div>Segunda Nota:</div>
+    <input type="text" id="segundaNota">
+
+    <div id="buttons">
+        <button onclick="cadastrar()">Cadastrar</button>
+        <button onclick="gerarLista()">Gerar Lista</button>
+    </div>
+  </div>
+
+  <div id="lista"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
