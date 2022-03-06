@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: linear-gradient( 109.6deg,  rgba(255,179,189,1) 1.8%, rgba(254,248,154,1) 50.6%, rgba(161,224,186,1) 100.3% );
+}
+
+#container{
+    height: 400px;
+    width: 400px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.212);
+    padding: 20px;
+}
+
+h1{
+    color: rgb(139, 55, 218);
+    font-size: 25px;
+}
+
+#formulario{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+#nomeTarefa{
+    width: 100%;
+    border: 0;
+    height: 40px;
+    border-radius: 8px;
+    outline: none;
+    padding: 15px;
+    font-weight: bold;
+    color: rgb(211, 39, 211);
+}
+
+button{
+    color: white;
+    background:rgb(139, 55, 218);
+    border: 0;
+    border-radius: 8px;
+    width: 60px;
+    cursor: pointer;
+}
+
+button:hover{
+    background:rgb(99, 13, 180);
+}
+
+.tarefa{
+    display: flex;
+    background: rgba(255, 192, 203, 0.589);
+    gap: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 4px;    
+}
+
+.tarefa div{
+    width: 100%;
+    color: rgb(211, 39, 211);
+    font-weight:bold;
+}
+
+.tarefa button{
+    width: 100px;
+}
+
+.tarefa.finalizada{
+    background: rgba(152, 100, 212, 0.438);
+}
