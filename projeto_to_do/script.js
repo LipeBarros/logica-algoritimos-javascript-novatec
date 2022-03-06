@@ -1,23 +1,5 @@
 const lista = document.getElementById("lista")
-
-const tarefas = [
-    {
-        nome:"Fazer Compras",
-        pronto: false 
-    },
-    {
-        nome:"Limpar Casa",
-        pronto: false 
-    },
-    {
-        nome:"Estudar",
-        pronto: false 
-    },
-    {
-        nome:"Academia",
-        pronto: false 
-    }
-]
+const tarefas = []
 
 function criarTarefa(){
     const nome = document.getElementById("nomeTarefa").value
@@ -38,15 +20,6 @@ function finalizaTarefa(index){
     
 }
 
-function encontraIndex(nome){
-    const tamanho = tarefas.length
-    for(let i=0; i<tamanho; i++){
-        if(tarefas[i].nome === nome){
-            return i
-        }
-    }
-}
-
 function deletaTarefa(index){
     tarefas.splice(index,1)
     preencheLista()
@@ -65,4 +38,3 @@ function preencheLista(){
     }
 }
 
-preencheLista()
