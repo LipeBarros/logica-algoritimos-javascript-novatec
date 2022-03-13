@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    font-family: 'Sansita Swashed', cursive;
+    color: #551851;
+}
+
+
+#container{
+    border-radius: 8px;
+    height: 400px;
+    width: 400px;
+    background: rgba(255, 255, 255, 0.199);
+    padding: 20px;
+}
+
+h1{
+    font-size: 30px;
+    text-align: center; 
+}
+
+#form{
+    margin-top: 20px;
+    display: flex;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+#nomeTarefa{
+    border: 0;
+    border-radius: 8px;
+    height: 40px;
+    width: 100%;
+    font-size: 15px;
+    outline: none;
+    padding: 10px;
+    color:#77006f ;
+    background: rgba(255, 255, 255, 0.247);
+}
+
+#form button{
+    border-radius: 8px;
+    border: 0;
+    background:#551851;
+    color: #ca62c3;
+    width: 20%;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#form button:hover{
+    background:#ca62c3 ;
+    color: #FFCC70;
+}
+
+.tarefa{
+    border-radius: 8px;
+    background: #ffcd7065;
+    height: 35px;
+    line-height: 35px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 5px;
+}
+
+.tarefa div{
+    width: 100%;
+}
+
+.tarefa button{
+   height: 18px;
+   border-radius: 10px;
+   padding: 2px;
+   border: 0;
+   background: #cc21c1;
+   font-weight: bold;
+   color: #633557;
+   padding: 0 10px;
+}
+
+.tarefa button:hover{
+    background: #551851;
+    color: #ca62c3;
+    cursor: pointer;
+}
+
+.tarefa.finalizada{
+    background:#72246d;
+    color: #C850C0;
+}

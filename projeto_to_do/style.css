@@ -76,6 +76,6 @@ button:hover{
     width: 100px;
 }
 
-.tarefa.finalizada{
-    background: rgba(152, 100, 212, 0.438);
-}
+        .tarefa.finalizada{
+            background: rgba(152, 100, 212, 0.438);
+        }
