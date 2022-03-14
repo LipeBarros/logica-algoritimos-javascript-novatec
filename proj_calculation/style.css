@@ -7,7 +7,6 @@
 body{
     background: #f9f9f9;
     display: flex;
-    border: 1px solid blue;
     height: 100vh;
     align-items: center;
     justify-content: center;
@@ -26,7 +25,7 @@ body{
     column-gap: 20px;
 }
 
-#container div{
+#container .bnt{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -36,26 +35,35 @@ body{
     cursor: pointer;
 }
 
+#container .bnt:active{
+    box-shadow: inset 2px 2px 5px rgb(209,209,209), -5px -5px 5px white;
+}
+
 #container #display{
     grid-column: 1/5;
     grid-row: 1/4;
     width: 300px;
     box-shadow:inset 5px 5px 5px rgb(209,209,209,0.466),inset -5px -5px 5px white;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: flex-end;
-    padding-right: 20px;
+    padding-right: 10px;
+    padding-left: 20px;
     cursor: auto;
 }
 
 #display #calculo{
     display: block;
-    font-size: 1.2rem;
+    font-size: 1.23rem;
     margin-bottom: 10px;
+    min-height: 1.4rem;
 }
 
 #display #resultado{
     display: block;
+    height: 1.4rem;
     color:rgb(0,179,149);
 }
 
@@ -71,6 +79,11 @@ body{
     color: white;
     font-weight: bold;
 }
+
+#container  #igual:active{
+    box-shadow: inset 2px 2px 5px rgb(1, 128, 106), -5px -5px 5px white;
+}
+
 
 #zero{
     grid-column: 1/3;

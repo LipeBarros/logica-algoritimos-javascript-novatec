@@ -10,26 +10,27 @@
 <body>
     <div id="container" >
         <div id="display">
-            <span id="calculo">5 + 2 + 3 x 4</span>
-            <span id="resultado">12.638</span>
+            <span id="calculo"></span>
+            <span id="resultado"></span>
         </div>
-        <div class="operador">C</div>
-        <div class="operador">/</div>
-        <div class="operador">*</div>
-        <div class="operador">-</div>
-        <div>7</div>
-        <div>8</div>
-        <div>9</div>
-        <div id="mais" class="operador">+</div>
-        <div>4</div>
-        <div>5</div>
-        <div>6</div>
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-        <div id="igual">=</div>
-        <div id="zero">0</div>
-        <div>.</div>
+        <div class="bnt operador" onclick="limpaDisplay()">C</div>
+        <div class="bnt operador" onclick="digita('/')">/</div>
+        <div class="bnt operador" onclick="digita('*')">*</div>
+        <div class="bnt operador" onclick="digita('-')">-</div>
+        <div class="bnt" onclick="digita(7)">7</div>
+        <div class="bnt" onclick="digita(8)">8</div>
+        <div class="bnt" onclick="digita(9)">9</div>
+        <div id="mais" class="bnt operador" onclick="digita('+')">+</div>
+        <div class="bnt" onclick="digita(4)">4</div>
+        <div class="bnt" onclick="digita(5)">5</div>
+        <div class="bnt" onclick="digita(6)">6</div>
+        <div class="bnt" onclick="digita(1)">1</div>
+        <div class="bnt" onclick="digita(2)">2</div>
+        <div class="bnt" onclick="digita(3)">3</div>
+        <div id="igual" class="bnt" onclick="resultado()">=</div>
+        <div id="zero" class="bnt" onclick="digita(0)">0</div>
+        <div class="bnt" onclick="digita('.')">.</div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
